@@ -1,0 +1,798 @@
+html {
+	/*correctif pour un bug d'Internet Explorer Windows*/
+	font-size: 100%;
+}
+body{}
+div, p {}
+/* Pour l'alignement des images avec CKeditor */
+figure{margin:20px;}
+address{padding:10px;border:1px solid #cacaca;border-radius:5px;}
+.mp0{ /* class pour margin et padding a 0*/
+	margin:0;padding:0;
+}
+
+@media print { /* important sinon avec bootstrap qd on veut imprimer il affiche les href */
+   a[href]:after {
+    content: "";
+  }
+}
+
+.navig-retour{margin:0 0 20px 0;}
+.clearer {clear: both;}
+.spacer {clear: both;}
+.sitemap_item{display:inline;}
+.divide5{width:100%;height:5px;}
+.divide10{width:100%;height:10px;}
+.divide15{width:100%;height:15px;}
+.divide20{width:100%;height:20px;}
+.divide30{width:100%;height:30px;}
+.divide40{width:100%;height:40px;}
+h1{}
+h2{}
+h3{}
+h4{}
+
+#btn_up{position: fixed;bottom:95px;right: 25px;cursor: pointer;display:none;}
+/*===============================
+    NEWS
+===============================*/
+.news { /* tableau general d'une news */
+	padding:0px;margin:0px;}
+.news1 { /*titre*/
+	text-align:left;
+	margin:0 0 10px 0;
+	padding:0;
+	font-weight:bold;
+	font-size:130%;
+}
+.news11 { /*titre*/
+
+}
+.news2 { /* auteur + date de la news */
+	font-size: 90%;text-align:right;
+}
+.news_chapo{ /* chapo */
+
+}
+.news4{ /* texte */
+
+}
+
+.news5  { /* url */
+	font-size: 90%;
+	background: transparent url('../Images/link.gif') no-repeat left center ;
+	text-align:left;
+	margin:0 0 0 5px;
+	padding:4px 16px;
+}
+.autresNews {padding:5px 0px;margin:0px;}
+
+.autresNews img { /* afficher une image dans la liste des autres news */
+	width:25px;
+	border:0;
+	margin:0 4px 0 0;
+	padding:0;
+	vertical-align:middle;
+}
+/* afficher le tableau avec les liens vers les news de service*/
+table.newsSvceLine { font-size:90%;margin:5px auto;padding:0;border:0px solid #000;}   
+table.newsSvceLine td{border-right:0px solid #000;text-align:center;padding:0px 4px;}
+table.newsSvceLine td.nonews{color:#b6b6b6;border-right:0px solid #000;text-align:center;padding:0px 4px;}
+
+/* titre des news de type fait_marquant*/ 
+.newsfm1{ }
+
+/* Cnews::shortDisplay() */
+a.lk_shortdisplay{text-decoration:none;}
+a.lk_shortdisplay:hover{text-decoration:none;opacity:0.9;}
+a.lk_shortdisplay:active{text-decoration:none;}
+a.lk_shortdisplay:visited{text-decoration:none;}
+
+.table_newsshortdisplay{ }
+.td_nsdply_image{}
+.td_nsdply_texte{text-align:left;padding-left:10px;vertical-align:middle;}
+
+.newsshort_image{padding:0;margin:0;overflow:hidden;border:0px solid;}
+.newsshort_titre{text-align:left;}
+.newsshort_date{font-size:90%;}
+.newsshort_texte{}
+
+.news_barre_nav{ /* ds page news onglets [actuellement] [archives] [rechercher] */
+	
+}
+.news_annees_archives{ /* ds page news/archives.php */
+
+}
+
+.autresNews{
+	margin:6px 0 0 0px;
+}
+
+.nouvelle_news{
+	background:transparent url(../Images/icon_new.gif) 0px 4px no-repeat;
+	padding:0 0 0 21px;
+	margin:0px 0 0 0px;
+}
+
+/*===============================
+    AGENDA
+===============================*/
+.eagdaGen1 { /* boite pour une journee (1ere, 3eme, 5eme etc.) */
+	padding:0 0 0 0px;
+} 
+.eagdaGen2 {/* boite pour une journee (2eme, 4eme, 6eme etc.) */
+	padding:0 0 0 0px;
+}  
+.eagda_evenement{ /* encapsule 1 evenement*/
+	padding-bottom:10px;
+	margin-bottom:10px;
+	border-bottom:1px solid #eee;
+}
+/*
+http://www.alsacreations.com/article/lire/1312-selectionner-les-freres-d-un-element-en-css-nth-child.html
+.eagda_evenement:nth-child(n+1){ 
+	margin-top:10px;
+	border:1px solid blue;
+}
+*/
+.eagda1{ /* titre ds agenda complet ou mini*/
+	font-size:110%;
+}
+.eagda2{ /* date ds agenda complet ou mini*/
+	color:rgb(137, 137, 137);
+}
+.eagda3{ /* type de seminaire ds agenda complet ou mini*/
+	color:rgb(137, 137, 137);
+}
+.eagda4{ /* intervenant ds agenda complet ou mini*/
+	color:rgb(137, 137, 137);
+}
+
+
+/* agenda par semaine */
+/* les jours de la semaine */
+.eagda_sem_ladate { font-weight:bold;margin:0 0 5px 0;}
+
+
+.eagda_jnm{
+	border-radius:5px;
+	background:#eee;
+	padding:5px;
+	margin: 0 0 5px 0; 
+}
+.eagda_jour{
+	text-align:center;
+	border-bottom:0px solid white;
+	margin:0 0 2px 0;
+}
+.eagda_numjour{
+	text-align:center;
+	font-size:120%;
+	font-weight:bold;
+	margin:0 0 2px 0;
+}
+.eagda_mois{
+	text-align:center;
+}
+.eagda_colonne_date{
+	float:left;
+	width:80px;
+	border:0px solid;
+}
+
+.eagda_colonne_infos{
+	float:left;
+	padding:0 0 20px 18px;
+	width:80%; /* pour que si titre trop long,les infos passent pas a ligne mais restent a dte de la date ici Eagenda/index.php*/
+}
+
+.eagda_cellule_semaine{ /* semaine.php */
+	width:32%;
+	border:0px solid;
+}
+
+/*===============================
+    SEMINAR
+===============================*/
+table.archive_years {margin-left: 0px;border:0px solid blue;}
+table.archive_years th {text-align: left;padding:2px 4px 2px 0;vertical-align:bottom;}
+table.archive_years th a {font-weight: normal;}
+table.archive_years th a:hover { }
+table.archive_years td {text-align:left;padding:2px 4px 2px 0;vertical-align:bottom;}
+
+/*
+page d'accueil des seminaires
+*/
+table.semin { width:99%; padding:2px; margin:0;}
+table.semin td.semin0 { width:60px;}
+
+td.semin1 { vertical-align:top; }/* 1ere colone avec date, intervenant, titre */
+td.semin2 { width:30%;vertical-align:top; } /* 2eme colonne avec type et lieu */
+
+.semin_img { width:60px;margin-right:5px;} /* qd image jointe au seminar pour l'afficher pge accueil semin */
+.semin_titre{ font-size:120%;font-weight:normal;margin:0 10px 3px 0;border:0px solid;}
+.semin_date {font-weight: bold;}
+.semin_lieu { margin:0;padding:0;}
+.semin_type { margin:0;padding:0;}
+.semin_url { margin:0;padding:0;font-size:90%;}
+.semin_files { margin:0;padding:0;font-size:90%;}
+.semin_warn_mess{ margin:0;padding:0;font-size:90%;font-style:italic;}
+.semin_intervenant{ }
+
+/* resume */
+.semin5 {}
+
+/*
+Affichage complet du seminaire
+*/
+.page_semin {
+   
+}
+
+.page_semin_titre {     /* Titre du seminaire */
+    font-weight:bold;text-align:left;font-size:170%;margin:15px 0 5px 0;
+}
+.page_semin_type {    /* Type de seminaire */
+   font-weight:normal;text-align:left;margin:20px 0 0px 0;padding:0;border-top:1px solid #eee;
+}
+.page_semin_date {     /* Date et heure et lieu */
+   font-size:100%;font-weight:bold;text-align:left;margin:10px 0 0px 0;
+}
+.page_semin_lieu {
+    font-weight: normal;border:0px solid #9a9a9a;text-align:left;padding:0;margin:0;
+}
+.page_semin_intervenant {    /* Intervenant */
+    font-weight:normal;text-align:left;font-size:100%;margin:0px 0 10px 0;padding:4px;background:#eee;
+}
+.page_semin_contact{    /* Intervenant */
+    font-weight:normal;
+}
+.page_semin_laboratoire {    /* laboratoire */
+    font-weight:normal;text-align:left;font-size:100%;
+}
+.page_semin_resume {     /* resume */
+   text-align:justify;padding:0;margin:20px 0 0 0;
+}
+.page_semin_list_fichiers {     /* la liste des fichiers */
+   margin:20px 0 0 0;padding:0px 10px 10px 0px;border:0px solid;
+}
+/*===============================
+    AST
+===============================*/
+.ast_page {width:99%;padding:0px 0px; margin:0px 0px 0 0; border:0px solid #ddd;}
+
+.ast_titre{font-size:140%;font-weight:bold;padding:0;margin:0 0 10px 0;}
+/*.ast_date{display:none;}*/
+
+.ast_ss_titreL {text-align:left;padding:0;margin:0 0 10px 0;}
+.ast_imgright {float:right;margin:0 0px 10px 30px;padding:0px;background-color:white;}
+.ast_imgleft{float:left;margin-right:30px;}
+.ast_legende {font-size:90%;margin-top:10px;color:#868686;text-align:justify;}
+.ast_url {background-color:transparent;padding:0px;margin:0px;text-align:left;}
+/* le texte dans les ast */
+.ast_content { padding:2px;margin:0;border:0px solid #fbf0bb;text-align:justify;}
+.ast_content_parag1 { font-style:normal;}
+.ast_pied_page {font-size:80%;font-style: normal;text-align:right;color:#cfcfcf;padding:2px 0px;margin:10px 0 0 0 ; border-bottom:1px solid #eee;}
+.ast-assoc-links{margin:0 0 3px 0;padding:0;font-size:90%;}
+
+.ast_img_shortdisplay{background-size:cover;}
+.ast_img_shortdisplay img{display:none;}
+/*
+Ast/index.php?aff=theme
+*/
+.ast_theme{font-weight:bold;margin:0;}
+.ast_sstheme{text-align:left;font-weight:normal;margin:0;padding:0 0 0 10px;background:transparent url(../Images/puceTriangle.jpg) 0 6px no-repeat;}
+.ast_theme_text{display:none;margin:0;padding:0;}
+/*
+Ast/index.php?aff=technique
+*/
+.ast_technique{font-weight:bold;margin:0;}
+.ast_sstechnique{font-weight:normal;margin:0;padding:0 0 0 10px;background:transparent url(../Images/puce_noire.png) 0 5px no-repeat;}
+.ast_technique_text{display:none;margin:0;padding:0;}
+
+/* Cast::display1 */
+.ast_display1 { padding:0; margin:5px 20px 5px 0;}
+
+.astshort {padding:0;margin:0px 0px 40px 0;}
+.astshort_titre {text-align:left;font-weight:normal;padding:0 0 2px 0;margin:0;font-size:110%;}
+.astshort_titre a { }
+.astshort_sstitre {text-align:left;font-style:normal;padding:0;margin:0;}
+.astshort_date{text-align:left;font-size:90%;color:#959494;padding:0;margin:0;}
+.astshort_texte{text-align:left;font-weight:normal;padding:0;margin:0;}
+
+/* pour menu de navigation ds la page ast_technique ou ast_service ou ast_groupe */
+/* tableau pour afficher le menu sur la gauche */
+#ast_navig_left {width:100%;}
+#ast_navig_left #partie_gauche {vertical-align:top;padding-right:25px;}
+#ast_navig_left #partie_droite{vertical-align:top;width:83%;}
+
+/*barre de navigation horizontale ds la page ast_technique ou ast_service ou ast_groupe */
+.ast_barre_nav {
+	padding:0 0 0 0px;
+	margin:2px 0 15px 0;
+}
+
+/*
+/Phocea/Vie_des_labos/Ast/index.php
+*/
+.astnavigmatrice { /* navigation themes / units / techniques */
+   margin:0px 0 20px 0 ;
+}
+
+.astnavigavancee{ /* ctrl la div avec moteur de recherche en tete accueil ast */
+    margin:0px 0 10px 0 ;
+	padding:0;
+}
+.astnavig_ordre{ /* ctrl affichage de la navigation par ordre */
+	/*display:none;*/
+	margin:0;
+}
+
+.ast_filtre_nav{ /*  ast.php le filtre par theme / par service / par technique*/
+	/*display:none;*/
+}
+
+.navig-drapeaux{
+	
+}
+.navig-drapeaux img{
+	
+}
+.navig-drapeaux .imgON{
+	border:solid #444;
+	border-width:1px;
+	padding:1px;
+}
+
+/*
+===================
+kifekoi
+===================
+*/
+.photo_short_desc{
+	width:45px;
+	height:auto;
+	overflow:hidden;
+	border:0px solid;
+	margin:0 0 2px 0;
+}
+.photo_short_desc img{
+	width:45px;
+	height:auto;
+}
+/*
+PISP
+afficher les pisp (/Phocea/Pisp/index.php)
+*/
+.short_pisp{float:left;text-align:center;width:110px;height:105px;border:0px solid;background:#eee;padding:10px 2px;margin:2px;}
+
+.short_pisp_img{ /* image qd on affiche toute les pisp*/
+	box-shadow: 1px 1px 12px #ddd;
+}
+.short_pisp_titre{ /*  nom prenom qd on affiche toutes les PISP */
+	margin:0 0 5px 0;
+	font-weight:bold;
+}
+.lienEncours{
+    border:0px solid blue;
+    padding:2px 2px;
+    background-color:#eee;
+}
+.lienAvoir{
+    border:0px solid blue;
+}
+
+/*
+PAGES LIBRES
+*/
+.page_libre{
+	border:0px solid blue;
+}
+.page_libre_menu{
+	float:left;width:20%;padding:0px;margin:0 20px 0 0;
+	overflow:hidden;background:white;border:0px solid blue;
+}
+.page_libre_contenu{
+	float:left;	width:75%;padding:0px;margin:0;overflow:hidden;border:0px solid blue;
+}
+
+/*
+ALBUM
+*/
+
+/*
+les boutons pour modifier/supprimer/deplacer des photos
+*/
+.bouton_action{
+	background-color:#FFF;border:1px solid black;width:90px;font-size:10px;
+}
+.bouton_action:hover{
+	background-color:#666;color:#fff;border:1px solid black;width:90px;font-size:10px;
+}
+
+.dertof_page1{}
+.dertof_page2{display:none;}
+.dertof_page3{display:none;}
+
+
+/*
+VIDEO
+*/
+.video_page{
+	margin:0 auto;border:0px solid;
+}
+.video_titre{
+	font-weight:bold;font-size:120%;text-align:center;
+}
+.video_sstitre{
+	font-weight:normal;text-align:center;margin:0 0 10px 0;
+}
+.video_parag{
+	text-align:justify;margin:10px auto;border:0px solid;
+}
+.video_lien{
+	text-align:left;margin:5px auto;padding:0;font-size:90%;
+}
+.video_duree{
+	text-align:left;margin:0px auto 10px auto;padding:0;font-size:90%;
+}
+.video_date{
+	text-align:left;margin:5px auto;padding:0;font-size:90%;
+}
+/*
+STAGES
+*/
+.stage_desc{}
+.stage_titre{font-size:110%;}
+.stage_dept{}
+
+/*
+THESES
+*/
+.these_gen{margin:10px 0 15px 0;border:1px solid #eee;border-radius:5px;}
+.these_titre{margin:0;padding:5px;font-size:130%;font-weight:normal;}
+.these_desc{margin:0;padding:0 0 0 13px;}
+.these_resume{margin:20px 0 0 0;padding:0px;text-align:justify;border:0px solid #eee;}
+
+/*
+MEMBRES
+*/
+/* page accueil annuaire pour ctrler l'affichage ou pas des liens vers le trombi, le kifekoi etc. */
+.liens_gentils_membres{
+	margin:10px 0 0 0;
+	display:block;
+}
+/* utilisee par Cmembres::form_rech_annuaire() */
+.input_rech_annuaire{width:80%;}
+
+/*
+Dossiers
+*/
+.dossier{}
+.dossier a{text-decoration:none;}
+.dossier a:hover{text-decoration:none;}
+.dossier_titre{font-weight:bold;font-size:150%;}
+.dossier_sstitre{font-weight:normal;font-size:120%;color:#646464;}
+.dossier_chapo{font-style:normal;font-size:120%;}
+.dossier_texte{}
+.dossier_image{margin-bottom:10px;width:350px;height:197px;overflow:hidden;border:0px solid blue;}
+
+/*
+FORMULAIRES
+*/
+/* autour des rubriques ds les formualaires des news etc.*/
+.entoure{
+	border:1px solid #d3d3d3;
+	padding:6px;
+	margin:10px 0 0 0;
+	border-radius: 5px 5px 5px 5px;
+}
+
+.warning {
+    color:#FFF;
+    padding:3px;
+    margin:0;
+    background-color:red;
+}
+.messok {
+    color:#FFF;
+    padding:3px;
+    margin:3px;
+    background-color:green;
+    text-align:center;
+}
+/* page accueil moderateur*/
+.item_acc_moderateur{padding:0 0 10px 18px;background:transparent url(../Images/icons/03/10/09.png) no-repeat 0px 0;}
+
+/* page publiee ou validee */
+.label_pub{
+	background:#468847;
+	padding:2px;
+	color:white;
+	border-radius:2px;
+	font-size:90%;
+}
+/* page non publiee ou non validee */
+.label_nonpub{
+	background:#B94A48;
+	padding:2px;
+	color:white;
+	border-radius:2px;
+	font-size:90%;
+}
+
+.submitbrouillon{
+    background:transparent url('../Images/brouillon.jpg') no-repeat 50% 50%;
+    border:0px solid black;
+}
+
+/*
+RSS (Cxml.php)
+*/
+.rss_title{
+	margin:5px 0 0 0;
+	padding:0;
+}
+.rss_description{
+	margin:0;
+	padding:0;
+}
+.rss_pubDate{ /* date avec heure en GMT */
+	margin:0;
+	padding:0;
+	color:#999;
+	font-size:90%;
+}
+.rss_date{ /* date avec heure locale*/ 
+	margin:0;
+	padding:0;
+	color:#999;
+	font-size:90%;
+}
+/*
+affichage des actus CEA
+*/
+.box_actucea{
+	border:1px solid #ccd009;
+    margin:0px 0 8px 0; 
+	padding:0;
+}
+.titre_box_actucea{
+    font-family: Verdana,Arial,Helvetica,sans-serif;
+    text-transform: uppercase;
+    color:white;
+    font-weight:bold;
+    background-color:#ccd009;
+    padding:4px;
+}
+.contenu_box_actucea{
+    margin:0; 
+	padding:8px;
+    background:#ffffff ;
+}
+.title_actucea{
+	background-color: transparent;
+    background-image: url(../Images/puce_noire.png);
+    background-repeat: no-repeat;
+    background-position: left 4px;
+    padding-left:16px;
+    margin:0px 0 5px 0;
+}
+.title_actucea a {
+    color: #696f01;
+}
+.image_actucea{
+	width:100px;
+	margin:5px 0 10px 10px;
+	vertical-align:top;
+}
+.pied_box_actucea{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:10px;
+	color: #000000;
+	padding:3px 3px 3px 20px;
+	margin:0;
+	background:#e3e577 url(../Images/puce_noire.png) no-repeat left 3px;
+	border-top:1px solid #9ca312;
+}
+.pied_box_actucea  a {color:#5f7806; text-decoration:none; }
+.pied_box_actucea  a:hover {text-decoration:underline; }
+
+
+/*
+Formulaire des comptes
+*/
+.titre_form{font-weight:bold;margin:0 0 10px 0;padding:0 0 0 12px;background:transparent url('../Images/icons/03/10/09.png') no-repeat 0 0;}
+.sous_form{
+	padding:2px;
+	margin:3px;
+}
+.sous_form_admin{
+	padding:2px;
+	margin:3px;
+	background:#FFEFEF;
+}
+.champ_form{
+	border-right: 0px solid #991F67;
+	text-align:right;
+	width:150px;
+	padding:0 10px 0 0;
+	vertical-align:top;
+}
+.infos_actuelles{color:#B3B3B3;margin:0;padding:0 0 0 3px;font-size:7pt;}
+
+
+/*
+calendrier
+*/
+#titre_mois{ font-size:110%;margin-top:10px;}
+#calendrier{width:300px;border:1px solid;padding:5px;background:white;} /* div qui entoure le calendrier */
+.libellejours{width:40px;margin:0;padding:0 0 8px 0;text-align:center;background:white;} /* cellules pour Lu, Ma, Me etc. */
+.itemNormalItem {padding:0 0 3px 0;text-align:center;}/* date du jour */
+.itemCurrentItem {font-weight:bold;padding:0 0 3px 0;text-align:center;}/* date du jour */
+.itemExistingItem {padding:0 0 3px 0;text-align:center;}/* ya un evenement */ 
+.itemSelectedItem {padding:0 0 3px 0;text-align:center;border:1px solid #eee; }/* jour selectionne */
+
+/*
+pour la documentation
+*/
+.lk_menu_encours{margin:0 0 0 0px;font-weight:bold;}
+.lk_menu_avoir{}
+
+.fct_avancees{padding:5px;background-color:#E9E9E9;margin:0 0 5px 0;width:95%;}
+.fct_avancees .titre{font-weight:bold;}
+.fct_avancees .show_code{background:#fff;padding:3px 5px 10px 5px;margin:0 0 5px 0;width:98%;}
+.fct_avancees .comment{color:#696969;}
+
+.textarea_sql{font-size:90%;width:500px;}
+#mise_a_jour{text-align:right;font-size:90%;margin:30px 0 0 0;color:#7b7b7b;}
+
+.doch3{
+	margin-top:20px;
+	margin-bottom:10px;
+	font-size:120%;
+	border-bottom:1px solid #e4e4e4;
+}
+
+
+/*
+le trombinoscope
+*/
+table.tableau_trombi{border:0px solid blue;}
+table.tableau_trombi td {border:1px solid #eee;vertical-align:top;}
+.img_trombi{overflow:hidden;width:100px;height:130px;margin:0 auto;}
+.nom_trombi{text-align:center;padding:2px;}
+
+/*
+COMPTEUR
+*/
+#compteur_visites{}
+
+#plan_du_site{
+
+}
+#plan_du_site ul {
+	margin: 0;
+}
+#plan_du_site ul li {
+	margin: 5px;
+}
+
+/*
+LIVRE D'OR
+*/
+.livredor_box{
+	border:1px solid #555;
+	padding:5px;
+	margin:0 0 10px 0;
+	width:70%;
+}
+
+.livredor_info_post{
+	font-style:italic;
+	color:#968196;
+	margin:3px 0 0 0;
+}
+
+/*
+LES COURS
+*/
+.cours_titre{
+	font-weight:bold;
+	font-size:120%;
+	margin:0 0 12px 0;
+}
+.cours_lieu{
+	font-weight:normal;
+}
+.cours_fichiers{
+	border:0px solid black;
+	margin:0 0 25px 0;
+}
+
+/*
+Bouton FACEBOOK et TWITTER
+*/
+.fb_twitter{
+	margin:0;
+	padding:0;
+}
+
+/*
+reservation salle
+*/
+.resa_deb{
+	background-color:#FBE991;
+	padding-right:0px;
+}
+
+.resa_deb_collee{
+	background-color:#FBE991;
+	border-top:1px solid white;
+}
+.resa_heures_cachees{
+	color:white;
+}
+.winkler{
+	background-color:#eee;
+}
+
+.calendarTable1{
+	width:250px;
+}
+
+.tooltip.in {
+  opacity: 0.8;
+  filter: alpha(opacity=80);
+}
+/*
+Nav avec 2 niveaux
+*/
+.niveau0{
+	font-weight:bold;
+	padding:10px;
+	margin:0;
+	border-width:1px 1px 0 1px;
+	border-style:solid;
+	border-color:#e4e4e4;
+}
+p.niveau0:first-child{border-radius:5px 5px 0 0;}
+p.niveau0:last-child{
+	border-width:1px 1px 1px 1px;
+	border-style:solid;
+	border-color:#e4e4e4;
+	border-radius:0 0 5px 5px;
+}
+p.niveau1:last-child{
+	border-width:1px 1px 1px 1px;
+	border-style:solid;
+	border-color:#e4e4e4;
+	border-radius:0 0 5px 5px;
+}
+.niveau0.active{
+	background:#337AB7;
+	border-radius:5px;
+}
+.niveau0.active a{
+	color:white;
+}
+.niveau0:hover{background:#eee;}
+.niveau0.active:hover{background:#337AB7;}
+.niveau1:hover{background:#eee;}
+.niveau1.active:hover{background:#337AB7;}
+.niveau1{
+	padding:10px 10px 10px 30px;
+	margin:0;
+	border-width:1px 1px 0 1px;
+	border-style:solid;
+	border-color:#e4e4e4;
+}
+.niveau1.active{
+	background:#337AB7;
+	border-radius:5px;
+}
+.niveau0 a:hover{text-decoration:none;}
+.niveau1 a:hover{text-decoration:none;}
+.niveau1.active a{
+	color:white;
+}
