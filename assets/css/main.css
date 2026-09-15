@@ -1958,3 +1958,9 @@ section,
 .starter-section {
   /* Add your styles here */
 }
+
+
+.astrophysics-subitem {
+  display: inline-block;
+  margin-left: 30px;
+}
